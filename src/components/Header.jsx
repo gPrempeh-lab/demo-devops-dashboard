@@ -4,7 +4,7 @@ const Header = () => {
       <h1>Demo DevOps Dashboard</h1>
 
       <p>
-        React | Docker | GitHub Actions | Kubernetes
+        React | Docker | GitHub Actions | Kubernetes | Terraform
       </p>
     </div>
   );
