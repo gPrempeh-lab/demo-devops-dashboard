@@ -85,6 +85,46 @@ const technologies = [
           "A Kubernetes object that gives a stable network address to a group of pods and load-balances traffic between them."
       }
     ]
+  },
+  {
+    category: "Cloud (Azure)",
+    items: [
+      {
+        name: "Azure",
+        description:
+          "Microsoft's cloud platform. It provides on-demand computing, storage, networking and managed services so you don't have to run your own servers."
+      },
+      {
+        name: "Azure Kubernetes Service (AKS)",
+        description:
+          "A managed Kubernetes service on Azure. Microsoft runs the control plane, so you only manage your applications and worker nodes."
+      },
+      {
+        name: "Azure Container Registry (ACR)",
+        description:
+          "A private registry on Azure for storing and managing Docker container images, which AKS can pull from securely."
+      }
+    ]
+  },
+  {
+    category: "Infrastructure as Code (Terraform)",
+    items: [
+      {
+        name: "Terraform",
+        description:
+          "An open-source tool from HashiCorp for defining cloud infrastructure in code, so it can be version-controlled, reviewed and created repeatably."
+      },
+      {
+        name: "Providers",
+        description:
+          "Plugins that let Terraform talk to a platform's API, such as the azurerm provider for creating Azure resources."
+      },
+      {
+        name: "State",
+        description:
+          "A file where Terraform records what it has created, so it can work out exactly what to add, change or remove on the next run."
+      }
+    ]
   }
 ];
 
