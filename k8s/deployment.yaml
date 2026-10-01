@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-devops-dashboard
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: demo-devops-dashboard
+  template:
+    metadata:
+      labels:
+        app: demo-devops-dashboard
+    spec:
+      containers:
+      - name: demo-devops-dashboard
+        image: demo-devops-dashboard:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - name: http
+          containerPort: 80
+        readinessProbe:
+          httpGet:
+            path: /
+            port: http
+        livenessProbe:
+          httpGet:
+            path: /
+            port: http
+        resources:
+          requests:
+            cpu: 50m
+            memory: 64Mi
+          limits:
+            cpu: 200m
+            memory: 128Mi
